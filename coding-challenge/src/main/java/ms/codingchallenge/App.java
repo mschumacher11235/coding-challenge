@@ -6,7 +6,7 @@ package ms.codingchallenge;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import ms.codingchallenge.c003.ArraySorterBean;
+import ms.codingchallenge.c004.StringCompressor;
 
 public class App 
 {
@@ -17,13 +17,9 @@ public class App
 	{
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		
-		ArraySorterBean arraySorter = appContext.getBean(ArraySorterBean.class);
-		int[] unsorted = {3,1,2};
-		int[] sorted = arraySorter.sort(unsorted);
+		StringCompressor stringCompressor = appContext.getBean(StringCompressor.class);
 		
-		for (int i : sorted) {
-			System.out.println(i);
-		}
+		System.out.println("Input: aafffrtttTddd");
+		System.out.println("Output: " + stringCompressor.compress("aafffrtttTddd"));
 	}
-
 }
