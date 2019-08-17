@@ -1,4 +1,4 @@
-package ms.codingchallenge.c004;
+package ms.codingchallenge.stringcompressor;
 
 import static org.junit.Assert.*;
 
@@ -15,7 +15,7 @@ import ms.codingchallenge.AppConfig;
 public class StringCompressorTest 
 {
 	@Autowired
-	private StringCompressor stringCompressor;
+	private StringCompressorInterface stringCompressor;
 
 	@Test
 	public void testCompressSimple() {

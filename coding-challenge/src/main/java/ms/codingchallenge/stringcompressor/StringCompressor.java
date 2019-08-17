@@ -1,4 +1,4 @@
-package ms.codingchallenge.c004;
+package ms.codingchallenge.stringcompressor;
 
 import org.springframework.stereotype.Service;
 
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
  * @author manuel
  */
 @Service
-public class StringCompressor 
+public class StringCompressor implements StringCompressorInterface
 {
 	/**
 	 * @param uncompressed

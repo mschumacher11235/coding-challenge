@@ -1,7 +1,4 @@
-/**
- * 
- */
-package ms.codingchallenge.c003;
+package ms.codingchallenge.arraysorter;
 
 import java.util.Arrays;
 
@@ -12,7 +9,7 @@ import org.springframework.stereotype.Service;
  *
  */
 @Service
-public class ArraySorterBean 
+public class ArraySorter implements ArraySorterInterface
 {
 	/**
 	 * @param unsorted
@@ -24,4 +21,13 @@ public class ArraySorterBean
 		return copy;
 	}
 
+	/**
+	 * @param unsorted
+	 * @return
+	 */
+	public char[] sort(char[] unsorted) {
+		char[] copy = Arrays.copyOf(unsorted, unsorted.length);
+		Arrays.sort(copy);
+		return copy;
+	}
 }

@@ -1,4 +1,4 @@
-package ms.codingchallenge.c003;
+package ms.codingchallenge.arraysorter;
 
 import static org.junit.Assert.*;
 
@@ -12,13 +12,13 @@ import ms.codingchallenge.AppConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
-public class ArraySorterBeanTest {
+public class ArraySorterTest {
 
 	@Autowired
-	private ArraySorterBean arraySorter;
+	private ArraySorterInterface arraySorter;
 	
 	@Test
-	public void testSort() 
+	public void testSortInt() 
 	{
 		int[] unsorted = {3,2,4,51,6};
 		
@@ -29,5 +29,17 @@ public class ArraySorterBeanTest {
 			sorted
 		);
 	}
-
+	
+	@Test
+	public void testSortChars() 
+	{
+		char[] unsorted = {'a','f','c','C','b', 'a'};
+		
+		char[] sorted = arraySorter.sort(unsorted);
+		
+		assertArrayEquals(
+			new char[] {'C','a','a','b','c','f'}, 
+			sorted
+		);
+	}
 }

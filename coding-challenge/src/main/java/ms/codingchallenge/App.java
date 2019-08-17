@@ -6,7 +6,7 @@ package ms.codingchallenge;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import ms.codingchallenge.c004.StringCompressor;
+import ms.codingchallenge.stringcompressor.StringCompressor;
 
 public class App 
 {
