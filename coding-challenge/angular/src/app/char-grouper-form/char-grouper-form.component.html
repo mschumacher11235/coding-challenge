@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col-md-12">
+		<h2>CharGrouper</h2>
+		<h4>Enter a string on the left and see the result on the right</h4>
+	</div>
+	<form class="form-horizontal">
+		<div class="col-md-5">
+			<input type="text" name="input" [(ngModel)]="inputString" class="form-control" placeholder="Enter string here ..." />
+		</div>
+		<div class="col-md-5">
+			<input type="text" name="output" [(ngModel)]="outputString" disabled="disabled" class="form-control" placeholder=" ... see the result here!" />
+		</div>
+		<div class="col-md-2">
+			<button type="submit" (click)="onSubmit()" [disabled]="!inputString" class="btn btn-submit">Update!</button>
+		</div>
+	</form>
+</div>
