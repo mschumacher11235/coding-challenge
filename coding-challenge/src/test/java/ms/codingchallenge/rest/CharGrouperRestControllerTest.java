@@ -31,6 +31,6 @@ public class CharGrouperRestControllerTest
 	{
 		mvc.perform(get("/group").param("chars", "abzuaaissna"))
 			.andExpect(status().isOk())
-			.andExpect(content().string("a4binssuz"));
+			.andExpect(content().string("{\"output\":\"a4binssuz\"}"));
 	}
 }

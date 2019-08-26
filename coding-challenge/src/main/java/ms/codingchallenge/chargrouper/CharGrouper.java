@@ -21,5 +21,4 @@ public class CharGrouper implements CharGrouperInterface
 		String sortedString = String.valueOf(sortedCharArray);
 		return stringCompressor.compress(sortedString);
 	}
-
 }
